@@ -1,0 +1,19 @@
+.toggle{
+    padding: 2px;
+    margin: 5px;
+    /* border: 2px solid black; */
+    display: inline-block;
+    width: 50%;
+}
+
+.data{
+
+    background-color: white;
+    border-radius: 4px;
+}
+.enterText{
+    margin: 5px;
+    padding: 2px;
+    display: inline-block;
+    width: 50%;
+}

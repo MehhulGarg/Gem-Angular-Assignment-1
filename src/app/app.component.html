@@ -1,0 +1,31 @@
+<nav class="navbar navbar-light bg-dark">
+  <span class="navbar-brand mb-0 h1 text-light">{{title}}</span>
+</nav>
+
+<div class="toggle">
+  <button type="button" class="btn btn-dark" (click)="toggle()" (click)="counter()">Display Details</button>
+  <h3>Count : {{count}}</h3>
+  <div class="card" *ngIf="display">
+    <div class="card-body">
+      Angular is an open-source, JavaScript framework written in TypeScript. Google maintains it, and its primary
+      purpose is to develop single-page applications. As a framework, Angular has clear advantages while also providing
+      a standard structure for developers to work with. It enables users to create large applications in a maintainable
+      manner.
+    </div>
+  </div>
+</div>
+<hr>
+<div class="enterText">
+  <h2>Enter Data:</h2>
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" #box name="text" placeholder="Enter Text" aria-label="Enter Text"
+      aria-describedby="button-addon2">
+    <button class="btn btn-outline-secondary" (click)="getVal(box.value)" type="button" id="button-addon2">Add</button>
+  </div>
+
+  <div class="data">
+    <ul *ngFor="let item of data;index as i">
+      <li [style.color]="color">{{item}}</li>
+    </ul>
+  </div>
+</div>
