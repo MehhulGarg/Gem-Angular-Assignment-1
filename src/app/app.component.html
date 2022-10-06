@@ -23,10 +23,6 @@
     <button class="btn btn-outline-secondary" (click)="getVal(box.value)" type="button" id="button-addon2">Add</button>
   </div>
 
-  <!-- <div class="data">
-    <h2 class="border border-dark rounded " *ngFor="let item of data; let i = index"
-    [ngClass]="{'text-bg-primary': (i+1)%5===0}">{{item}}</h2>
-  </div> -->
   <div class="data">
     <ul *ngFor="let item of data;index as i">
       <li [ngClass]="{'text-bg-primary': (i+1)%5===0}" >{{item}}</li>
