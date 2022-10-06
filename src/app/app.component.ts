@@ -28,3 +28,5 @@ export class AppComponent {
     }
   }
 }
+// clear input field after clecked on add button
+//add required validation on input field 
