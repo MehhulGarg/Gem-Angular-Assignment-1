@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {FormGroup,FormControl,Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -18,13 +19,19 @@ export class AppComponent {
   }
   public data: string[] = [];
   public ind: number=0;
-  getVal(val:string){
-    if(val!=''){
-      this.data.push(val);
+  displayVal(val:any){
+      this.data.push(val.text);
       this.ind++;
-    }
-    else{
-      alert('Enter Value!');
-    }
+  }
+  getVal(){
+    this.displayVal(this.myForm.value);
+    this.myForm.reset();
+  }
+
+  myForm=new FormGroup({
+    text:new FormControl('',Validators.required)
+  })
+  get text(){
+    return this.myForm.get('text');
   }
 }
