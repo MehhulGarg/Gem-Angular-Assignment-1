@@ -35,3 +35,5 @@ export class AppComponent {
     return this.myForm.get('text');
   }
 }
+// clear input field after clecked on add button
+//add required validation on input field 
